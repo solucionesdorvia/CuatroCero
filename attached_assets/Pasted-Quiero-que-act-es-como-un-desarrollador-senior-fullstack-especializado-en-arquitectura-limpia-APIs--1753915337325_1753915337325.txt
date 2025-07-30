@@ -1,0 +1,88 @@
+Quiero que actúes como un desarrollador senior fullstack especializado en arquitectura limpia, APIs RESTful o GraphQL, y diseño de sistemas escalables.
+
+Necesito que desarrolles todo el backend completo para una plataforma llamada Cuatro Cero, enfocada en la gestión de clubes deportivos de futsal, venta de plantillas y eBooks, y suscripciones a herramientas web.
+
+El frontend lo proveeré más adelante. Quiero que dejes todo listo como API/documentación/estructura backend clara para consumir desde el cliente.
+
+⚠️ Muy importante: No incluyas estilos ni frontend. Usaré los siguientes colores cuando diseñe la UI:
+	•	Color principal: #1D2834
+	•	Color secundario: #213041
+	•	Color acento/terciario: #AFF606
+
+Solo estructurá los modelos, relaciones, endpoints, flujos y lógica.
+
+⸻
+
+📦 Funcionalidades requeridas:
+
+🔐 Autenticación y usuarios
+	•	Registro por email y contraseña, con validación por código (enviar simuladamente por consola).
+	•	Inicio de sesión.
+	•	JWT o sistema de sesión segura.
+	•	Roles de usuario según plan (INSTITUCIONAL, CUERPO TÉCNICO, TÉCNICO).
+
+🏠 Página pública
+	•	Simular endpoints de:
+	•	Inicio (con banners y presentación de servicio).
+	•	Tienda (productos).
+	•	Gestión (planes y botón “¡Quiero este!”).
+	•	Contacto (redes sociales y email).
+	•	Carrito de compras básico: agregar/quitar productos, ver total.
+
+🛒 Tienda
+	•	Productos divididos en:
+	•	Plantillas
+	•	eBooks
+	•	Cada producto: nombre, imagen, precio, categoría, descripción, stock.
+	•	API para manejar el carrito y simular compra.
+
+📊 Gestión de clubes (app web privada)
+
+Para usuarios autenticados con plan activo.
+	•	Club
+	•	Crear club con: nombre, abreviatura, escudo (imagen).
+	•	Crear categorías (Primera, Reserva, etc.).
+	•	Agregar jugadores a cada categoría con: nombre, apodo, nacimiento, posición, pie hábil, estado, imagen.
+	•	Entrenamientos
+	•	Crear ejercicios con:
+	•	Nombre, categoría (color), dificultad, tiempo estimado, jugadores/arqueros necesarios, materiales, imagen de pizarra, descripción, objetivo.
+	•	Planificar sesiones:
+	•	Elegir ejercicios creados
+	•	Fecha, categoría, resumen de porcentaje de enfoque (por tipo de ejercicio).
+	•	Partidos
+	•	Crear torneos
+	•	Agendar partidos (rival, fecha, local/visitante, lista de citados).
+	•	Gestión en vivo:
+	•	Cronómetro por jugador
+	•	Registro de eventos (goles, faltas, cambios, tarjetas, etc.)
+	•	Titulares/suplentes, cambios en vivo, segundo tiempo, finalizar partido.
+	•	Guardar estadísticas individuales.
+	•	Estadísticas
+	•	Consultar ficha de jugador con datos por partido.
+	•	Filtros por torneo, fecha, tipo de acción, etc.
+
+💳 Planes y suscripciones
+	•	Crear y listar planes.
+	•	Simulación de suscripción con botón “¡Quiero este!”
+	•	Link a WhatsApp (solo endpoint o metadata)
+
+📩 Contacto
+	•	Endpoint con metadata de:
+	•	WhatsApp
+	•	Instagram
+	•	Email
+
+⚙️ Admin opcional
+	•	Simular un panel o endpoints protegidos para gestión de productos, planes, usuarios y métricas.
+
+⸻
+
+📚 Elegí el stack que prefieras (Django, Node.js con Express, FastAPI, etc.), pero estructurá todo modular y bien documentado para conectar con un frontend moderno.
+
+Usá una base de datos relacional (PostgreSQL recomendado) y que el sistema sea escalable y mantenible.
+
+Cuando termines, documentá:
+	•	Estructura de carpetas
+	•	Modelos principales
+	•	Rutas disponibles
+	•	Recomendaciones para autenticación e integración
