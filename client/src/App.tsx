@@ -30,6 +30,11 @@ import DashboardPlanificacionEntrenamientosPage from "@/pages/dashboard-planific
 import DashboardEjercicios3vs7Page from "@/pages/dashboard-ejercicios-3vs7";
 import DashboardPlanificacionCategoriaPage from "@/pages/dashboard-planificacion-categoria";
 import DashboardCrearEntrenamientoPlusPage from "@/pages/dashboard-crear-entrenamiento-plus";
+import DashboardPlanificacionFechaPage from "@/pages/dashboard-planificacion-fecha";
+import DashboardCrearEntrenamientoGuardarPage from "@/pages/dashboard-crear-entrenamiento-guardar";
+import DashboardEjercicioDetallePage from "@/pages/dashboard-ejercicio-detalle";
+import DashboardDivisionesPage from "@/pages/dashboard-divisiones";
+import DashboardAVLPrimeraDivisionPage from "@/pages/dashboard-avl-primera-division";
 import Store from "@/pages/store";
 import Plans from "@/pages/plans";
 import Contact from "@/pages/contact";
@@ -66,6 +71,11 @@ function Router() {
       <ProtectedRoute path="/dashboard/ejercicios-3vs7" component={DashboardEjercicios3vs7Page} />
       <ProtectedRoute path="/dashboard/planificacion-categoria" component={DashboardPlanificacionCategoriaPage} />
       <ProtectedRoute path="/dashboard/crear-entrenamiento-plus" component={DashboardCrearEntrenamientoPlusPage} />
+      <ProtectedRoute path="/dashboard/planificacion-fecha" component={DashboardPlanificacionFechaPage} />
+      <ProtectedRoute path="/dashboard/crear-entrenamiento-guardar" component={DashboardCrearEntrenamientoGuardarPage} />
+      <ProtectedRoute path="/dashboard/ejercicio-detalle" component={DashboardEjercicioDetallePage} />
+      <ProtectedRoute path="/dashboard/divisiones" component={DashboardDivisionesPage} />
+      <ProtectedRoute path="/dashboard/avl-primera-division" component={DashboardAVLPrimeraDivisionPage} />
       <Route component={NotFound} />
     </Switch>
   );

@@ -2,7 +2,7 @@ import { Link } from "wouter";
 import CuatroLogo from "@/components/cuatro-logo";
 import Footer from "@/components/footer";
 
-export default function DashboardDivisionPage() {
+export default function DashboardPlanificacionFechaPage() {
   return (
     <div className="min-h-screen bg-background">
       {/* Header */}
@@ -16,7 +16,7 @@ export default function DashboardDivisionPage() {
           <Link to="/dashboard/inicio" className="block text-sm text-muted-foreground hover:text-foreground border-b border-muted pb-1">
             Inicio
           </Link>
-          <Link to="/dashboard/club" className="block text-sm text-foreground font-medium border-b border-foreground pb-1">
+          <Link to="/dashboard/club" className="block text-sm text-muted-foreground hover:text-foreground border-b border-muted pb-1">
             Club
           </Link>
           <Link to="/dashboard/equipo" className="block text-sm text-muted-foreground hover:text-foreground border-b border-muted pb-1">
@@ -25,7 +25,7 @@ export default function DashboardDivisionPage() {
           <Link to="/dashboard/ejercicios" className="block text-sm text-muted-foreground hover:text-foreground border-b border-muted pb-1">
             Ejercicios
           </Link>
-          <Link to="/dashboard/entrenamiento" className="block text-sm text-muted-foreground hover:text-foreground border-b border-muted pb-1">
+          <Link to="/dashboard/entrenamiento" className="block text-sm text-foreground font-medium border-b border-foreground pb-1">
             Entrenamiento
           </Link>
           <Link to="/dashboard/partidos" className="block text-sm text-muted-foreground hover:text-foreground border-b border-muted pb-1">
@@ -38,26 +38,30 @@ export default function DashboardDivisionPage() {
 
         {/* Main Content */}
         <main className="flex-1 px-8 py-12">
-          <h1 className="text-2xl font-bold text-foreground mb-8 text-center">Divisiones</h1>
+          <h1 className="text-2xl font-bold text-foreground mb-8 text-center">Planificacion - Entrenamiento</h1>
           
-          {/* Divisions Grid */}
+          {/* Grid Layout */}
           <div className="grid grid-cols-2 gap-8 max-w-4xl mx-auto mb-12">
-            {/* Existing Division */}
-            <Link to="/dashboard/avl-primera-division">
-              <div className="bg-card rounded-lg p-8 text-center hover:bg-card/80 transition-colors">
-                <h2 className="text-lg font-medium text-foreground">Primera División</h2>
-              </div>
-            </Link>
+            {/* Create Next Training */}
+            <div className="bg-card rounded-lg p-8 flex flex-col items-center justify-center text-center hover:bg-card/80 transition-colors">
+              <div className="text-4xl mb-4">+</div>
+              <p className="text-lg font-medium text-foreground">Crear Proximo<br/>Entrenamiento</p>
+            </div>
             
+            {/* Superioridades Category */}
+            <div className="bg-purple-600 rounded-lg p-8 text-center hover:bg-purple-700 transition-colors">
+              <h2 className="text-xl font-bold text-white">Superioridades</h2>
+            </div>
+
             {/* Empty slots */}
-            {Array.from({ length: 7 }, (_, i) => (
+            {Array.from({ length: 6 }, (_, i) => (
               <div key={i} className="bg-card rounded-lg aspect-[4/3]"></div>
             ))}
           </div>
 
           {/* Back Button */}
           <div className="flex justify-center">
-            <Link to="/dashboard/equipo">
+            <Link to="/dashboard/planificacion-entrenamientos">
               <button className="btn-primary px-8 py-3">Volver</button>
             </Link>
           </div>

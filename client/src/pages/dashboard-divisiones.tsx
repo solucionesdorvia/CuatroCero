@@ -2,7 +2,7 @@ import { Link } from "wouter";
 import CuatroLogo from "@/components/cuatro-logo";
 import Footer from "@/components/footer";
 
-export default function DashboardDivisionPage() {
+export default function DashboardDivisionesPage() {
   return (
     <div className="min-h-screen bg-background">
       {/* Header */}
@@ -16,10 +16,10 @@ export default function DashboardDivisionPage() {
           <Link to="/dashboard/inicio" className="block text-sm text-muted-foreground hover:text-foreground border-b border-muted pb-1">
             Inicio
           </Link>
-          <Link to="/dashboard/club" className="block text-sm text-foreground font-medium border-b border-foreground pb-1">
+          <Link to="/dashboard/club" className="block text-sm text-muted-foreground hover:text-foreground border-b border-muted pb-1">
             Club
           </Link>
-          <Link to="/dashboard/equipo" className="block text-sm text-muted-foreground hover:text-foreground border-b border-muted pb-1">
+          <Link to="/dashboard/equipo" className="block text-sm text-foreground font-medium border-b border-foreground pb-1">
             Equipo
           </Link>
           <Link to="/dashboard/ejercicios" className="block text-sm text-muted-foreground hover:text-foreground border-b border-muted pb-1">

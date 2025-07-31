@@ -50,8 +50,15 @@ export default function DashboardEjerciciosTransicionesPage() {
               </Link>
             </div>
 
+            {/* Example Exercise */}
+            <Link to="/dashboard/ejercicio-detalle">
+              <div className="bg-purple-600 text-white p-6 rounded text-center hover:bg-purple-700 transition-colors aspect-square flex items-center justify-center">
+                <h3 className="text-lg font-medium">3 VS 2 Ataque - Defensa</h3>
+              </div>
+            </Link>
+
             {/* Empty exercise slots */}
-            {Array.from({ length: 8 }, (_, i) => (
+            {Array.from({ length: 7 }, (_, i) => (
               <div key={i} className="bg-card rounded-lg aspect-square"></div>
             ))}
           </div>
