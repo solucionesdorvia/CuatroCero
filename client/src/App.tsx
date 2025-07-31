@@ -15,6 +15,21 @@ import CuentasPage from "@/pages/cuentas";
 import DashboardInicioPage from "@/pages/dashboard-inicio";
 import DashboardEquipoPage from "@/pages/dashboard-equipo";
 import DashboardCrearEquipoPage from "@/pages/dashboard-crear-equipo";
+import DashboardDivisionPage from "@/pages/dashboard-division";
+import DashboardCrearDivisionPage from "@/pages/dashboard-crear-division";
+import DashboardPlantelPage from "@/pages/dashboard-plantel";
+import DashboardCrearJugadorPage from "@/pages/dashboard-crear-jugador";
+import DashboardFichaJugadorPage from "@/pages/dashboard-ficha-jugador";
+import DashboardEntrenamientoPage from "@/pages/dashboard-entrenamiento";
+import DashboardEjerciciosPage from "@/pages/dashboard-ejercicios";
+import DashboardCrearCategoriaPage from "@/pages/dashboard-crear-categoria";
+import DashboardEjerciciosCategoriaPage from "@/pages/dashboard-ejercicios-categoria";
+import DashboardEjerciciosTransicionesPage from "@/pages/dashboard-ejercicios-transiciones";
+import DashboardCrearEjercicioPage from "@/pages/dashboard-crear-ejercicio";
+import DashboardPlanificacionEntrenamientosPage from "@/pages/dashboard-planificacion-entrenamientos";
+import DashboardEjercicios3vs7Page from "@/pages/dashboard-ejercicios-3vs7";
+import DashboardPlanificacionCategoriaPage from "@/pages/dashboard-planificacion-categoria";
+import DashboardCrearEntrenamientoPlusPage from "@/pages/dashboard-crear-entrenamiento-plus";
 import Store from "@/pages/store";
 import Plans from "@/pages/plans";
 import Contact from "@/pages/contact";
@@ -36,6 +51,21 @@ function Router() {
       <ProtectedRoute path="/dashboard/inicio" component={DashboardInicioPage} />
       <ProtectedRoute path="/dashboard/equipo" component={DashboardEquipoPage} />
       <ProtectedRoute path="/dashboard/crear-equipo" component={DashboardCrearEquipoPage} />
+      <ProtectedRoute path="/dashboard/division" component={DashboardDivisionPage} />
+      <ProtectedRoute path="/dashboard/crear-division" component={DashboardCrearDivisionPage} />
+      <ProtectedRoute path="/dashboard/plantel" component={DashboardPlantelPage} />
+      <ProtectedRoute path="/dashboard/crear-jugador" component={DashboardCrearJugadorPage} />
+      <ProtectedRoute path="/dashboard/ficha-jugador" component={DashboardFichaJugadorPage} />
+      <ProtectedRoute path="/dashboard/entrenamiento" component={DashboardEntrenamientoPage} />
+      <ProtectedRoute path="/dashboard/ejercicios" component={DashboardEjerciciosPage} />
+      <ProtectedRoute path="/dashboard/crear-categoria" component={DashboardCrearCategoriaPage} />
+      <ProtectedRoute path="/dashboard/ejercicios-categoria" component={DashboardEjerciciosCategoriaPage} />
+      <ProtectedRoute path="/dashboard/ejercicios-transiciones" component={DashboardEjerciciosTransicionesPage} />
+      <ProtectedRoute path="/dashboard/crear-ejercicio" component={DashboardCrearEjercicioPage} />
+      <ProtectedRoute path="/dashboard/planificacion-entrenamientos" component={DashboardPlanificacionEntrenamientosPage} />
+      <ProtectedRoute path="/dashboard/ejercicios-3vs7" component={DashboardEjercicios3vs7Page} />
+      <ProtectedRoute path="/dashboard/planificacion-categoria" component={DashboardPlanificacionCategoriaPage} />
+      <ProtectedRoute path="/dashboard/crear-entrenamiento-plus" component={DashboardCrearEntrenamientoPlusPage} />
       <Route component={NotFound} />
     </Switch>
   );

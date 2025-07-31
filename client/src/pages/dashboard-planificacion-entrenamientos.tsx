@@ -2,7 +2,7 @@ import { Link } from "wouter";
 import CuatroLogo from "@/components/cuatro-logo";
 import Footer from "@/components/footer";
 
-export default function DashboardEquipoPage() {
+export default function DashboardPlanificacionEntrenamientosPage() {
   return (
     <div className="min-h-screen bg-background">
       {/* Header */}
@@ -19,13 +19,13 @@ export default function DashboardEquipoPage() {
           <Link to="/dashboard/club" className="block text-sm text-muted-foreground hover:text-foreground border-b border-muted pb-1">
             Club
           </Link>
-          <Link to="/dashboard/equipo" className="block text-sm text-foreground font-medium border-b border-foreground pb-1">
+          <Link to="/dashboard/equipo" className="block text-sm text-muted-foreground hover:text-foreground border-b border-muted pb-1">
             Equipo
           </Link>
           <Link to="/dashboard/ejercicios" className="block text-sm text-muted-foreground hover:text-foreground border-b border-muted pb-1">
             Ejercicios
           </Link>
-          <Link to="/dashboard/entrenamiento" className="block text-sm text-muted-foreground hover:text-foreground border-b border-muted pb-1">
+          <Link to="/dashboard/entrenamiento" className="block text-sm text-foreground font-medium border-b border-foreground pb-1">
             Entrenamiento
           </Link>
           <Link to="/dashboard/partidos" className="block text-sm text-muted-foreground hover:text-foreground border-b border-muted pb-1">
@@ -38,15 +38,22 @@ export default function DashboardEquipoPage() {
 
         {/* Main Content */}
         <main className="flex-1 px-8 py-12">
-          <h1 className="text-2xl font-bold text-foreground mb-8 text-center">Equipo</h1>
+          <h1 className="text-2xl font-bold text-foreground mb-8 text-center">Planificacion Equipos</h1>
           
-          {/* Create Team Button */}
-          <div className="flex justify-center">
-            <Link to="/dashboard/division">
-              <button className="bg-card rounded-lg p-16 text-center hover:bg-card/80 transition-colors">
-                <div className="text-4xl mb-4">+</div>
-                <p className="text-xl font-medium text-foreground">Crear Equipo</p>
-              </button>
+          {/* Training Cards Grid */}
+          <div className="grid grid-cols-2 gap-8 max-w-4xl mx-auto mb-12">
+            {/* Schedule Training */}
+            <Link to="/dashboard/planificacion-fecha">
+              <div className="bg-card rounded-lg p-12 text-center hover:bg-card/80 transition-colors">
+                <h2 className="text-xl font-medium text-foreground">Planificacion Fecha de Entrenamientos</h2>
+              </div>
+            </Link>
+            
+            {/* Create Training */}
+            <Link to="/dashboard/crear-entrenamiento">
+              <div className="bg-card rounded-lg p-12 text-center hover:bg-card/80 transition-colors">
+                <h2 className="text-xl font-medium text-foreground">Crear Entrenamiento</h2>
+              </div>
             </Link>
           </div>
         </main>
