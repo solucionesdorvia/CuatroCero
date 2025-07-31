@@ -101,6 +101,12 @@
     font-weight: 500;
   }
   
+  /* Auth Page Styles */
+  .auth-input {
+    @apply w-full p-3 bg-transparent border-0 border-b border-muted-foreground text-foreground placeholder:text-muted-foreground;
+    @apply focus:outline-none focus:border-primary transition-colors;
+  }
+  
   /* Navigation Components */
   .nav-link {
     @apply text-muted-foreground hover:text-foreground transition-colors cursor-pointer font-medium;
