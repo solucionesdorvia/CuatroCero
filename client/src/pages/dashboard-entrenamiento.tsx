@@ -1,5 +1,6 @@
 import { Link } from "wouter";
 import CuatroLogo from "@/components/cuatro-logo";
+import Footer from "@/components/footer";
 
 export default function DashboardEntrenamientoPage() {
   return (
@@ -122,20 +123,9 @@ export default function DashboardEntrenamientoPage() {
           </div>
         </div>
 
-        {/* Footer */}
-        <div className="text-center">
-          <div className="space-y-2">
-            <p className="text-sm text-muted-foreground">CUATRO CERO</p>
-            <p className="text-sm text-muted-foreground">GESTIÓN DE EQUIPO</p>
-            <p className="text-sm text-muted-foreground">Pizarras para entrenamiento</p>
-          </div>
-          
-          <div className="mt-4 space-y-1">
-            <p className="text-xs text-muted-foreground">Redes Sociales</p>
-            <p className="text-xs text-muted-foreground">Newsletters</p>
-          </div>
-        </div>
       </div>
+      
+      <Footer />
     </div>
   );
 }

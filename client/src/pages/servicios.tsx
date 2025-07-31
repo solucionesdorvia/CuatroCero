@@ -1,5 +1,6 @@
 import { Link } from "wouter";
 import CuatroLogo from "@/components/cuatro-logo";
+import Footer from "@/components/footer";
 
 export default function ServiciosPage() {
   return (
@@ -117,20 +118,9 @@ export default function ServiciosPage() {
           </div>
         </div>
 
-        {/* Footer Contact */}
-        <div className="text-center">
-          <div className="space-y-2">
-            <p className="text-sm text-muted-foreground">Cuatro Cero</p>
-            <p className="text-sm text-muted-foreground">Gestión de Equipo</p>
-            <p className="text-sm text-muted-foreground">Pizarras para entrenamiento</p>
-          </div>
-          
-          <div className="mt-4 space-y-1">
-            <p className="text-xs text-muted-foreground">Redes Sociales</p>
-            <p className="text-xs text-muted-foreground">Newsletters</p>
-          </div>
-        </div>
       </div>
+      
+      <Footer />
     </div>
   );
 }
