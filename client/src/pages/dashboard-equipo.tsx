@@ -2,7 +2,7 @@ import { Link } from "wouter";
 import CuatroLogo from "@/components/cuatro-logo";
 import Footer from "@/components/footer";
 
-export default function CuentasPage() {
+export default function DashboardEquipoPage() {
   return (
     <div className="min-h-screen bg-background">
       {/* Header */}
@@ -16,10 +16,10 @@ export default function CuentasPage() {
           <Link to="/dashboard/inicio" className="block text-sm text-muted-foreground hover:text-foreground border-b border-muted pb-1">
             Inicio
           </Link>
-          <Link to="/dashboard/club" className="block text-sm text-foreground font-medium border-b border-foreground pb-1">
+          <Link to="/dashboard/club" className="block text-sm text-muted-foreground hover:text-foreground border-b border-muted pb-1">
             Club
           </Link>
-          <Link to="/dashboard/equipo" className="block text-sm text-muted-foreground hover:text-foreground border-b border-muted pb-1">
+          <Link to="/dashboard/equipo" className="block text-sm text-foreground font-medium border-b border-foreground pb-1">
             Equipo
           </Link>
           <Link to="/dashboard/ejercicios" className="block text-sm text-muted-foreground hover:text-foreground border-b border-muted pb-1">
@@ -38,23 +38,16 @@ export default function CuentasPage() {
 
         {/* Main Content */}
         <main className="flex-1 px-8 py-12">
-          <div className="grid grid-cols-2 gap-8 max-w-4xl">
-            {/* Role Cards */}
-            <div className="bg-card rounded-lg p-8 text-center">
-              <h2 className="text-2xl font-bold text-foreground mb-4">TECNICO</h2>
-            </div>
-            
-            <div className="bg-card rounded-lg p-8 text-center">
-              <h2 className="text-2xl font-bold text-foreground mb-4">CUERPO TECNICO</h2>
-            </div>
-            
-            <div className="bg-card rounded-lg p-8 text-center">
-              <h2 className="text-2xl font-bold text-foreground mb-4">INSTITUCIONAL</h2>
-            </div>
-            
-            <div className="bg-card rounded-lg p-8 text-center">
-              <h2 className="text-xl font-medium text-foreground mb-4">Partidos en Vivo</h2>
-            </div>
+          <h1 className="text-2xl font-bold text-foreground mb-8 text-center">Equipo</h1>
+          
+          {/* Create Team Button */}
+          <div className="flex justify-center">
+            <Link to="/dashboard/crear-equipo">
+              <button className="bg-card rounded-lg p-16 text-center hover:bg-card/80 transition-colors">
+                <div className="text-4xl mb-4">+</div>
+                <p className="text-xl font-medium text-foreground">Crear Equipo</p>
+              </button>
+            </Link>
           </div>
         </main>
       </div>

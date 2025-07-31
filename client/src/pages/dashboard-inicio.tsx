@@ -5,107 +5,71 @@ import Footer from "@/components/footer";
 export default function DashboardInicioPage() {
   return (
     <div className="min-h-screen bg-background">
-      {/* Navigation */}
-      <nav className="flex items-center justify-between p-6">
-        <CuatroLogo size="sm" orientation="horizontal" showSubtitle={false} />
-        
-        <div className="flex items-center gap-8">
-          <Link href="/dashboard/inicio" className="nav-link active">Inicio</Link>
-          <Link href="/dashboard/entrenamiento" className="nav-link">Entrenamiento</Link>
-          <Link href="/dashboard/partido" className="nav-link">Partido</Link>
-        </div>
-      </nav>
+      {/* Header */}
+      <header className="px-8 py-4 flex justify-center">
+        <CuatroLogo size="md" orientation="horizontal" showSubtitle={false} />
+      </header>
 
-      {/* Main Content */}
-      <div className="max-w-7xl mx-auto px-6 py-12">
-        
-        {/* Header */}
-        <div className="text-center mb-12">
-          <h1 className="text-3xl font-bold mb-4">Inicio</h1>
-          <p className="text-lg text-muted-foreground">Panel de Control Principal</p>
-        </div>
+      {/* Sidebar Navigation */}
+      <div className="flex">
+        <nav className="w-64 px-8 py-12 space-y-6">
+          <Link to="/dashboard/inicio" className="block text-sm text-foreground font-medium border-b border-foreground pb-1">
+            Inicio
+          </Link>
+          <Link to="/dashboard/club" className="block text-sm text-muted-foreground hover:text-foreground border-b border-muted pb-1">
+            Club
+          </Link>
+          <Link to="/dashboard/equipo" className="block text-sm text-muted-foreground hover:text-foreground border-b border-muted pb-1">
+            Equipo
+          </Link>
+          <Link to="/dashboard/ejercicios" className="block text-sm text-muted-foreground hover:text-foreground border-b border-muted pb-1">
+            Ejercicios
+          </Link>
+          <Link to="/dashboard/entrenamiento" className="block text-sm text-muted-foreground hover:text-foreground border-b border-muted pb-1">
+            Entrenamiento
+          </Link>
+          <Link to="/dashboard/partidos" className="block text-sm text-muted-foreground hover:text-foreground border-b border-muted pb-1">
+            Partidos
+          </Link>
+          <Link to="/dashboard/partidos-vivo" className="block text-sm text-muted-foreground hover:text-foreground border-b border-muted pb-1">
+            Partidos en Vivo
+          </Link>
+        </nav>
 
-        {/* Dashboard Cards */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-          
-          {/* Equipos Card */}
-          <div className="card-cuatro p-6">
-            <h3 className="text-xl font-bold mb-4">Equipos</h3>
-            <div className="space-y-3">
-              <div className="bg-secondary p-3 rounded">
-                <p className="font-medium">Equipo Principal</p>
-                <p className="text-sm text-muted-foreground">15 jugadores</p>
-              </div>
-              <div className="bg-secondary p-3 rounded">
-                <p className="font-medium">Reserva</p>
-                <p className="text-sm text-muted-foreground">12 jugadores</p>
+        {/* Main Content */}
+        <main className="flex-1 px-8 py-12">
+          <div className="grid grid-cols-2 gap-8 max-w-4xl">
+            {/* Main Cards */}
+            <div className="bg-card rounded-lg p-8 text-center">
+              <h2 className="text-xl font-medium text-foreground mb-4">Equipo</h2>
+            </div>
+            
+            <div className="bg-card rounded-lg p-8 text-center">
+              <h2 className="text-xl font-medium text-foreground mb-4">Entrenamiento</h2>
+            </div>
+            
+            {/* Locked Cards */}
+            <div className="bg-card rounded-lg p-8 text-center relative">
+              <h2 className="text-xl font-medium text-muted-foreground mb-4">Partidos</h2>
+              <div className="absolute inset-0 flex items-center justify-center">
+                <div className="w-8 h-8 bg-muted rounded flex items-center justify-center">
+                  <span className="text-xl">🔒</span>
+                </div>
               </div>
             </div>
-            <button className="btn-primary w-full mt-4">Gestionar Equipos</button>
-          </div>
-
-          {/* Entrenamientos Card */}
-          <div className="card-cuatro p-6">
-            <h3 className="text-xl font-bold mb-4">Entrenamientos</h3>
-            <div className="space-y-3">
-              <div className="bg-secondary p-3 rounded">
-                <p className="font-medium">Próximo Entrenamiento</p>
-                <p className="text-sm text-muted-foreground">Hoy 18:00</p>
-              </div>
-              <div className="bg-secondary p-3 rounded">
-                <p className="font-medium">Planificados</p>
-                <p className="text-sm text-muted-foreground">5 esta semana</p>
+            
+            <div className="bg-card rounded-lg p-8 text-center relative">
+              <h2 className="text-xl font-medium text-muted-foreground mb-4">Partidos en Vivo</h2>
+              <div className="absolute inset-0 flex items-center justify-center">
+                <div className="w-8 h-8 bg-muted rounded flex items-center justify-center">
+                  <span className="text-xl">🔒</span>
+                </div>
               </div>
             </div>
-            <Link href="/dashboard/entrenamiento">
-              <button className="btn-primary w-full mt-4">Ver Entrenamientos</button>
-            </Link>
           </div>
-
-          {/* Partidos Card */}
-          <div className="card-cuatro p-6">
-            <h3 className="text-xl font-bold mb-4">Partidos</h3>
-            <div className="space-y-3">
-              <div className="bg-secondary p-3 rounded">
-                <p className="font-medium">Próximo Partido</p>
-                <p className="text-sm text-muted-foreground">Sábado vs Rival FC</p>
-              </div>
-              <div className="bg-secondary p-3 rounded">
-                <p className="font-medium">Resultados</p>
-                <p className="text-sm text-muted-foreground">3-1 último partido</p>
-              </div>
-            </div>
-            <Link href="/dashboard/partido">
-              <button className="btn-primary w-full mt-4">Ver Partidos</button>
-            </Link>
-          </div>
-        </div>
-
-        {/* Quick Stats */}
-        <div className="grid md:grid-cols-4 gap-6 mb-12">
-          <div className="text-center p-6 bg-card rounded-lg">
-            <div className="text-2xl font-bold text-primary">27</div>
-            <div className="text-sm text-muted-foreground">Jugadores Total</div>
-          </div>
-          
-          <div className="text-center p-6 bg-card rounded-lg">
-            <div className="text-2xl font-bold text-primary">12</div>
-            <div className="text-sm text-muted-foreground">Entrenamientos</div>
-          </div>
-          
-          <div className="text-center p-6 bg-card rounded-lg">
-            <div className="text-2xl font-bold text-primary">8</div>
-            <div className="text-sm text-muted-foreground">Partidos Jugados</div>
-          </div>
-          
-          <div className="text-center p-6 bg-card rounded-lg">
-            <div className="text-2xl font-bold text-primary">75%</div>
-            <div className="text-sm text-muted-foreground">Efectividad</div>
-          </div>
-        </div>
-
+        </main>
       </div>
-      
+
       <Footer />
     </div>
   );
