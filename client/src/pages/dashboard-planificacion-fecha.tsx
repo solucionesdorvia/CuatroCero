@@ -1,74 +1,53 @@
 import { Link } from "wouter";
-import CuatroLogo from "@/components/cuatro-logo";
-import Footer from "@/components/footer";
+import DashboardLayout from "@/components/dashboard-layout";
 
 export default function DashboardPlanificacionFechaPage() {
   return (
-    <div className="min-h-screen bg-background">
-      {/* Header */}
-      <header className="px-8 py-4 flex justify-center">
-        <CuatroLogo size="md" orientation="horizontal" showSubtitle={false} />
-      </header>
-
-      {/* Sidebar Navigation */}
-      <div className="flex">
-        <nav className="w-64 px-8 py-12 space-y-6">
-          <Link to="/dashboard/inicio" className="block text-sm text-muted-foreground hover:text-foreground border-b border-muted pb-1">
-            Inicio
-          </Link>
-          <Link to="/dashboard/club" className="block text-sm text-muted-foreground hover:text-foreground border-b border-muted pb-1">
-            Club
-          </Link>
-          <Link to="/dashboard/equipo" className="block text-sm text-muted-foreground hover:text-foreground border-b border-muted pb-1">
-            Equipo
-          </Link>
-          <Link to="/dashboard/ejercicios" className="block text-sm text-muted-foreground hover:text-foreground border-b border-muted pb-1">
-            Ejercicios
-          </Link>
-          <Link to="/dashboard/entrenamiento" className="block text-sm text-foreground font-medium border-b border-foreground pb-1">
-            Entrenamiento
-          </Link>
-          <Link to="/dashboard/partidos" className="block text-sm text-muted-foreground hover:text-foreground border-b border-muted pb-1">
-            Partidos
-          </Link>
-          <Link to="/dashboard/partidos-vivo" className="block text-sm text-muted-foreground hover:text-foreground border-b border-muted pb-1">
-            Partidos en Vivo
-          </Link>
-        </nav>
-
-        {/* Main Content */}
-        <main className="flex-1 px-8 py-12">
-          <h1 className="text-2xl font-bold text-foreground mb-8 text-center">Planificacion - Entrenamiento</h1>
-          
-          {/* Grid Layout */}
-          <div className="grid grid-cols-2 gap-8 max-w-4xl mx-auto mb-12">
-            {/* Create Next Training */}
-            <div className="bg-card rounded-lg p-8 flex flex-col items-center justify-center text-center hover:bg-card/80 transition-colors">
-              <div className="text-4xl mb-4">+</div>
-              <p className="text-lg font-medium text-foreground">Crear Proximo<br/>Entrenamiento</p>
+    <DashboardLayout title="Planificación - Fecha" currentSection="Entrenamiento">
+      {/* Calendar Grid */}
+      <div className="bg-card rounded-lg p-4 lg:p-8 mb-8 max-w-4xl mx-auto">
+        <div className="grid grid-cols-7 gap-2 lg:gap-4 mb-4">
+          {["LUN", "MAR", "MIE", "JUE", "VIE", "SAB", "DOM"].map((day) => (
+            <div key={day} className="text-center text-xs lg:text-sm font-medium text-muted-foreground py-2">
+              {day}
             </div>
+          ))}
+        </div>
+        
+        <div className="grid grid-cols-7 gap-2 lg:gap-4">
+          {/* Calendar days */}
+          {Array.from({ length: 35 }, (_, i) => {
+            const day = i - 6; // Start from day -6 to fill the grid
+            const isCurrentMonth = day > 0 && day <= 31;
+            const isSelected = day === 15; // Example selected day
             
-            {/* Superioridades Category */}
-            <div className="bg-purple-600 rounded-lg p-8 text-center hover:bg-purple-700 transition-colors">
-              <h2 className="text-xl font-bold text-white">Superioridades</h2>
-            </div>
-
-            {/* Empty slots */}
-            {Array.from({ length: 6 }, (_, i) => (
-              <div key={i} className="bg-card rounded-lg aspect-[4/3]"></div>
-            ))}
-          </div>
-
-          {/* Back Button */}
-          <div className="flex justify-center">
-            <Link to="/dashboard/planificacion-entrenamientos">
-              <button className="btn-primary px-8 py-3">Volver</button>
-            </Link>
-          </div>
-        </main>
+            return (
+              <button 
+                key={i}
+                className={`aspect-square flex items-center justify-center rounded text-xs lg:text-sm transition-colors ${
+                  !isCurrentMonth 
+                    ? 'text-muted' 
+                    : isSelected 
+                      ? 'bg-accent text-primary font-medium' 
+                      : 'hover:bg-card/80 text-foreground'
+                }`}
+              >
+                {isCurrentMonth ? day : ''}
+              </button>
+            );
+          })}
+        </div>
       </div>
 
-      <Footer />
-    </div>
+      {/* Buttons */}
+      <div className="flex flex-col sm:flex-row justify-center gap-4 px-4">
+        <Link to="/dashboard/planificacion-categoria">
+          <button className="btn-secondary px-6 lg:px-8 py-3 w-full sm:w-auto">Volver</button>
+        </Link>
+        <Link to="/dashboard/crear-entrenamiento-guardar">
+          <button className="btn-primary px-6 lg:px-8 py-3 w-full sm:w-auto">Continuar</button>
+        </Link>
+      </div>
+    </DashboardLayout>
   );
 }

@@ -16,13 +16,12 @@ export default function Navigation() {
     enabled: !!user,
   });
 
-  const cartItemCount = cart.reduce((total: number, item: any) => total + item.quantity, 0);
+  const cartItemCount = Array.isArray(cart) ? cart.reduce((total: number, item: any) => total + item.quantity, 0) : 0;
 
   const navigation = [
     { name: "Inicio", href: "/" },
     { name: "Tienda", href: "/store" },
     { name: "Gestión", href: "/plans" },
-    { name: "Contacto", href: "/contact" },
   ];
 
   return (
@@ -66,7 +65,7 @@ export default function Navigation() {
 
             {user ? (
               <div className="flex items-center space-x-4">
-                <Link href="/dashboard">
+                <Link href="/dashboard/inicio">
                   <Button variant="outline" size="sm">
                     Dashboard
                   </Button>

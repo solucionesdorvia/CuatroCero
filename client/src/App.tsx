@@ -37,7 +37,6 @@ import DashboardDivisionesPage from "@/pages/dashboard-divisiones";
 import DashboardAVLPrimeraDivisionPage from "@/pages/dashboard-avl-primera-division";
 import Store from "@/pages/store";
 import Plans from "@/pages/plans";
-import Contact from "@/pages/contact";
 import NotFound from "@/pages/not-found";
 
 function Router() {
@@ -52,7 +51,6 @@ function Router() {
       <Route path="/cuentas" component={CuentasPage} />
       <Route path="/store" component={Store} />
       <Route path="/plans" component={Plans} />
-      <Route path="/contact" component={Contact} />
       <ProtectedRoute path="/dashboard/inicio" component={DashboardInicioPage} />
       <ProtectedRoute path="/dashboard/equipo" component={DashboardEquipoPage} />
       <ProtectedRoute path="/dashboard/crear-equipo" component={DashboardCrearEquipoPage} />
