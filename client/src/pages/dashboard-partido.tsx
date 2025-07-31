@@ -1,14 +1,12 @@
 import { Link } from "wouter";
+import CuatroLogo from "@/components/cuatro-logo";
 
 export default function DashboardPartidoPage() {
   return (
     <div className="min-h-screen bg-background">
       {/* Navigation */}
       <nav className="flex items-center justify-between p-6">
-        <div className="cuatro-logo">
-          <div className="cuatro-logo-icon"></div>
-          <span className="cuatro-logo-text text-foreground">Cuatro <span className="text-primary">Cero</span></span>
-        </div>
+        <CuatroLogo size="sm" orientation="horizontal" showSubtitle={false} />
         
         <div className="flex items-center gap-8">
           <Link href="/dashboard/inicio" className="nav-link">Inicio</Link>
@@ -145,8 +143,8 @@ export default function DashboardPartidoPage() {
         {/* Footer */}
         <div className="text-center">
           <div className="space-y-2">
-            <p className="text-sm text-muted-foreground">Cuatro Cero</p>
-            <p className="text-sm text-muted-foreground">Gestión de Equipo</p>
+            <p className="text-sm text-muted-foreground">CUATRO CERO</p>
+            <p className="text-sm text-muted-foreground">GESTIÓN DE EQUIPO</p>
             <p className="text-sm text-muted-foreground">Pizarras para entrenamiento</p>
           </div>
           

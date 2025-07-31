@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useLocation } from "wouter";
+import CuatroLogo from "@/components/cuatro-logo";
 
 export default function ConfirmationPage() {
   const [, setLocation] = useLocation();
@@ -19,11 +20,7 @@ export default function ConfirmationPage() {
         
         {/* Logo */}
         <div className="text-center mb-8">
-          <div className="cuatro-logo justify-center mb-4">
-            <div className="cuatro-logo-icon"></div>
-            <span className="cuatro-logo-text text-foreground">Cuatro <span className="text-primary">Cero</span></span>
-          </div>
-          <p className="text-sm text-muted-foreground">GESTIÓN DE EQUIPO</p>
+          <CuatroLogo size="md" orientation="vertical" showSubtitle={true} />
         </div>
 
         {/* Confirmation Form */}

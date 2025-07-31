@@ -1,14 +1,12 @@
 import { Link } from "wouter";
+import CuatroLogo from "@/components/cuatro-logo";
 
 export default function ServiciosPage() {
   return (
     <div className="min-h-screen bg-background">
       {/* Navigation */}
       <nav className="flex items-center justify-between p-6">
-        <div className="cuatro-logo">
-          <div className="cuatro-logo-icon"></div>
-          <span className="cuatro-logo-text text-foreground">Cuatro <span className="text-primary">Cero</span></span>
-        </div>
+        <CuatroLogo size="sm" orientation="horizontal" showSubtitle={false} />
         
         <div className="flex items-center gap-8">
           <Link href="/" className="nav-link">Home</Link>

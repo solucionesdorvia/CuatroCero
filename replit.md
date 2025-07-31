@@ -7,6 +7,7 @@ Cuatro Cero is a comprehensive full-stack web application designed for managing 
 ## User Preferences
 
 Preferred communication style: Simple, everyday language.
+Logo requirements: Official Cuatro Cero logo with angular brackets (green) and "GESTIÓN DE EQUIPO" subtitle exactly as provided in the design.
 
 ## System Architecture
 
@@ -17,6 +18,8 @@ Preferred communication style: Simple, everyday language.
 - **State Management**: TanStack Query for server state management
 - **UI Framework**: Shadcn/ui components with Radix UI primitives
 - **Styling**: Tailwind CSS with custom design tokens
+- **Design System**: Custom dark theme with official Cuatro Cero branding
+- **Logo Component**: SVG-based CuatroLogo component with official design
 
 ### Backend Architecture
 - **Framework**: Express.js with TypeScript

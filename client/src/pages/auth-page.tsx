@@ -5,6 +5,7 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { insertUserSchema } from "@shared/schema";
 import { z } from "zod";
+import CuatroLogo from "@/components/cuatro-logo";
 
 const loginSchema = z.object({
   email: z.string().email("Email inválido"),
@@ -67,11 +68,7 @@ export default function AuthPage() {
         
         {/* Logo */}
         <div className="text-center mb-8">
-          <div className="cuatro-logo justify-center mb-4">
-            <div className="cuatro-logo-icon"></div>
-            <span className="cuatro-logo-text text-foreground">Cuatro <span className="text-primary">Cero</span></span>
-          </div>
-          <p className="text-sm text-muted-foreground">GESTIÓN DE EQUIPO</p>
+          <CuatroLogo size="md" orientation="vertical" showSubtitle={true} />
         </div>
 
         {/* Form Card */}
